@@ -57,9 +57,9 @@ public class Window {
             public void mouseMoved(MouseEvent e) {
                 Point mouse = getPointRelativeToDrawingPanel(e);
                 if (surface.square.getMoveRectangle().contains(mouse)) {
-                    surface.setCursor(Cursor.getPredefinedCursor(Cursor.MOVE_CURSOR));
-                } else if (surface.square.getResizeRectangle().contains(mouse) && !surface.square.getMoveRectangle().contains(mouse)) {
                     surface.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+                } else if (surface.square.getResizeRectangle().contains(mouse) && !surface.square.getMoveRectangle().contains(mouse)) {
+                    surface.setCursor(Cursor.getPredefinedCursor(Cursor.MOVE_CURSOR));
                 } else {
                     surface.setCursor(Cursor.getDefaultCursor());
                 }
